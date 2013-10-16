@@ -1,0 +1,104 @@
+ .branding {
+  background:#fff;
+  padding-top:10px;
+  padding-bottom:10px;
+  position:relative;
+  z-index:10;
+  }
+
+.mb-logo,
+.branding .logo {
+  background:transparent url(webgen_logo_300x35.png) no-repeat 0px 10px;
+  display:inline-block;
+  vertical-align:middle;
+  height:60px;
+  width:300px;
+  text-indent:-999em;
+  overflow:hidden;
+  }
+  .mb-logo.white { background-position:0px -90px; }
+  .mb-logo.small {
+    width:70px;
+    height:20px;
+    background-position:-80px 0px;
+    }
+/*Padding
+---------------------------------------------------------*/
+
+  .pad4x { padding-left: 40px; padding-right: 40px;}
+
+/* Markup free clearing
+Details: http://www.positioniseverything.net/easyclearing.html
+------------------------------------------------------- */
+.clearfix { display:block; }
+.clearfix:after {
+  content:'.';
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+  }
+
+
+.branding .menu {
+  display:block;
+  padding-top: 10px;
+}
+
+.branding .menu li a {
+  float: left;
+  width:25%;
+  font-size:15px;
+  line-height:20px;
+  height: 40px;
+  position:relative;
+  display:block;
+  text-align:center;
+  white-space:nowrap;
+  position:relative;
+  z-index:0;
+  padding:10px 5px;
+  border-radius:3px;
+  }
+
+.branding .menu .active a {
+  z-index:1;
+  color: #870599;
+  background:#e5e5e5;
+  }
+.branding .menu .about a {
+  color:#aaa;
+  }
+.branding .menu .about a:hover,
+.branding .menu .about.active a {
+  color:#777;
+  }
+
+/* Columns
+------------------------------------------------------- */
+.col0    { float:left; width:04.1666%; }
+.col1    { float:left; width:08.3333%; }
+.col2    { float:left; width:16.6666%; }
+.col3    { float:left; width:25.0000%; }
+.col4    { float:left; width:33.3333%; }
+.col5    { float:left; width:41.6666%; }
+.col6    { float:left; width:50.0000%; }
+.col7    { float:left; width:58.3333%; }
+.col8    { float:left; width:66.6666%; }
+.col9    { float:left; width:75.0000%; }
+.col10   { float:left; width:83.3333%; }
+.col11   { float:left; width:91.6666%; }
+.col12   { width:100%; }
+
+/* Links */
+a {
+  color:#580264;
+  text-decoration:none;
+  }
+  a:hover { color:#777; }
+  
+
+
+a.quiet { color:rgba(255,0,0,.5);}
+a.quiet:hover { color:rgba(0,0,0,.75);}
+

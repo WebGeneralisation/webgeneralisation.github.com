@@ -1,46 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>WebGeneneralisation</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="styles/base_styles.css" />
+  <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+  <link rel="stylesheet" href="interactive_logo/webgen_logo_style.css" />
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
 
-<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<link rel="stylesheet" type="text/css" href="styles/main_style.css" />
-<link rel="stylesheet" type="text/css" href="styles/mbar_style.css" />
-<link rel="stylesheet" type="text/css" href="styles/content_style.css" />
-
+  <title>WebGeneralisation</title>
 </head>
+
 <body>
-    <div id="wrapper">
-        <div id="navigation">
-        	<div>
-            <ul id="menu-bar">
-				 <li class="active"><a id='logo' href='#'><img src="https://raw.github.com/WebGeneralisation/Admin_CorporateDesign/master/webgen_logo_new.png" alt="WebGen" height="30"></a></li>
-				 <li><a href="#">Developers</a>
-				  <ul>
-				   <li><a href="#">Administrative</a></li>
-				   <li><a href="#">Applications</a></li>
-				   <li><a href="#">Functionalities</a></li>
-				  </ul>
-				 </li>
-				 <li><a href="#">Users</a></li>
-				 <li><a href="#">Academics</a></li>
-				 <li><a href="#">Contact Us</a></li>
-				</ul>
-			</div>
-            
-        </div>
-        <div id="content">
-        	<div>
-           	<p>Currently heavily under construction!</p>
-           	<div id="one"></div>
-			<div id="two"></div>
-			<div id="three"></div>
-			<div id="four"></div>
-       		</div>
-       </div>
-        <div id="footer">
-            <p>This is the Footer</p>
-        </div>
-    </div>
+<div class="main">
+  <div class="margin4">
+      <div id='logo'></div>
+      <script src="interactive_logo/webgen_logo_script.js"></script>
+      <script>
+        var logo = d3.select('#logo');
+        webgen_logo(logo);
+      </script>
+  </div>
+</div>
+<a href='/plan.html'><div class="main">
+  What is the plan?
+</div></a>
+
 </body>
-</html>
