@@ -1,0 +1,34 @@
+/*These are the main styles of the homepage of webgeneralisation.github.io
+
+*Ralf Klammer 16.10.2013*
+*/
+
+.beam{ background-color: rgb(186, 186, 186); }
+
+.margin1  { margin-left:10%; }
+
+.margin_b1 { margin-bottom:10px;}
+
+.padding1 { padding:40px; }
+
+.t-align-c {text-align:center;}
+
+.invisible_anchor{
+	text-decoration: none;
+	color:#000;
+}
+
+.dark_grey { color: rgb(97, 97, 97); }
+.white { color: rgb(255,255,255); }
+
+.f22{ font-size: 22pt; }
+.f36{ font-size: 36pt; }
+
+.l_heigth1 { line-height:2; }
+
+.inset_shadow  { text-shadow: rgb(224, 224, 224) 1px 1px 0px; }
+
+p.serif{font-family:"Times New Roman",Times,serif;}
+p.sansserif{font-family:Arial,Helvetica,sans-serif;}
+
+

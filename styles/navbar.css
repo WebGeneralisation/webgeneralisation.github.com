@@ -1,3 +1,11 @@
+/*I was unable to build a nice NavigationBar on my own.
+These styles are taken from MapBox.com
+
+Everybody is free to propose a better solution!!!
+
+*Ralf Klammer 16.10.2013*
+*/
+
  .branding {
   background:#fff;
   padding-top:10px;
@@ -25,7 +33,7 @@
 /*Padding
 ---------------------------------------------------------*/
 
-  .pad4x { padding-left: 40px; padding-right: 40px;}
+  .pad4x { padding-left: 20px; padding-right: 20px;}
 
 /* Markup free clearing
 Details: http://www.positioniseverything.net/easyclearing.html
@@ -47,7 +55,7 @@ Details: http://www.positioniseverything.net/easyclearing.html
 
 .branding .menu li a {
   float: left;
-  width:25%;
+  width:15%;
   font-size:15px;
   line-height:20px;
   height: 40px;
