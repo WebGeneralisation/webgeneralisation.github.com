@@ -103,10 +103,31 @@ a {
   color:#580264;
   text-decoration:none;
   }
-  a:hover { color:#777; }
+a:hover { color:#777; }
   
 
 
 a.quiet { color:rgba(255,0,0,.5);}
 a.quiet:hover { color:rgba(0,0,0,.75);}
 
+/*Sub Navigation Bar
+-------------------------*/
+.sub_nav_element{
+  display:inline-block;
+  width:150px;
+  height:34px;
+  padding-top:6px;
+  font-size:14pt;
+  text-align:center;
+  background-color:#777;
+  color:#fff;
+  border-radius: 0px 0px 25px 5px;
+}
+.sub_nav_element:hover{
+  background-color:#999;
+}
+
+.fixedElement {
+    position:fixed;
+    top:0;
+}
