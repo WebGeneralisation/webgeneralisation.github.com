@@ -1,7 +1,8 @@
-function webgen_logo(container){
+function webgen_logo(container, width_){
 
-	var width = 1500,
-	    height = 250;
+	var width = width_
+	    height = width_/6
+	    scale = width*208,55; //200000
 
 	var path = d3.geo.path();
 
@@ -32,7 +33,7 @@ function webgen_logo(container){
 
 		var projection = d3.geo.mercator()
 		    .center([13.735, 51.1])
-	    	    .scale(300000)
+	    	    .scale(scale)
 		    .translate([width / 2, height / 2]);
 
 		var path = d3.geo.path()

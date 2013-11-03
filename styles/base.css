@@ -5,9 +5,11 @@
 
 .beam{ background-color: rgb(186, 186, 186); }
 
-.margin1  { margin-left:10%; }
+.margin0  { margin-left:1%;}
+.margin1  { margin-left:10%;}
 
-.margin_b1 { margin-bottom:10px;}
+.margin_b0 { margin-top:20px; }
+.margin_b1 { margin-top:56px; }
 
 .padding1 { padding:40px; }
 

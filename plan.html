@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles/reset.css" />
   <link rel="stylesheet" type="text/css" href="styles/navbar.css" />
   <link rel="stylesheet" type="text/css" href="styles/base.css" />
@@ -13,52 +15,39 @@
 </head>
 
 <body>
-<div id='navbar'>
-  <div class="branding pad4x clearfix">
-    <div class="col3">
-      <a id="webgen-logo" class="logo" href="index.html">WebGen</a>
-    </div>
-    <ul class="menu col6">    
-      <li class="active">
-        <a id="nav-plan" href="plan.html">The plan!</a>
-      </li>
-      <li class="">
-        <a id="nav-stages" href="dummy.html">How to participate</a>
-      </li>
-      <li class="">
-        <a id="nav-ToDo" href="dummy.html">Areas</a>
-      </li>
-      <li class="">
-        <a id="nav-Status" href="https://github.com/organizations/WebGeneralisation">News</a>
-      </li>
-      <li class="about">
-        <a id="nav-about" href="dummy.html">Who we are?</a>
-      </li>      
-    </ul>
-  </div>
-</div>
+<script>
+var contentJSON = [
+  {'head':'plan', 'ref':'', 'content':'That is the the aim of this project!'},
+  {'head':'stages', 'ref':'', 'content':'Stages of Development'},
+  {'head':'tasks', 'ref':'', 'content':'Open Tasks'}
+];
+var navBar = d3.select('body').append('div').attr('id','sub_navbar').attr('class','fixedElement')
+navBar.selectAll('div').data(contentJSON)
+  .enter().append('div').attr('class','sub_nav_element')
+    .append('a')
+      .attr('href',function(d){return d.ref})
+      .text(function(d){return d.head})
 
-<div id="sub_navbar" class="fixedElement">
-  <div class="sub_nav_element" >
-    <a href="">Plan</a>
-  </div>
-  <div class="sub_nav_element">
-    <a href="">Stages</a>
-  </div>
-  <div class="sub_nav_element">
-    <a href="">Tasks</a>
-  </div>
+var contents = d3.select('body').append('div').attr('id','contents')
+contents.selectAll('div').data(contentJSON)
+  .enter().append('div')
+    .attr('class','beam margin_b1 padding1 inset_shadow')
+    .attr('id',function(d){return d.head})
+    .append('p')
+      .attr('class','t-align-c f36 sansserif dark_grey')
+      .attr('href',function(d){return d.ref})
+      .text(function(d){return d.content})
 
-</div>
-<div class="beam margin_b1 padding1 inset_shadow" id='plan'>
-  <p class='t-align-c f36 sansserif dark_grey'>That is the the aim of this project!</p>
-</div>
-<div class="beam margin_b1 padding1 inset_shadow" id='states'>
-  <p class='t-align-c f36 sansserif dark_grey'>Stages of Development</p>
-</div>
-<div class="beam margin_b1 padding1 inset_shadow" id='tasks'>
-  <p class='t-align-c f36 sansserif dark_grey'>Open Tasks</p>
-</div>
+  //Automatic resizing when the window is resized
+  $(window).resize(function() {
+    location.reload()
+  });
+  
+</script>
+
+
+
+
 
 
 </body>
