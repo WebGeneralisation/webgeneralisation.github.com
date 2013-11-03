@@ -6,19 +6,19 @@ body{
   background-image:url("https://raw.github.com/WebGeneralisation/Admin_CorporateDesign/master/webgen_logo_new.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position:right top;
-  background-size: 35%; 
+  background-position:center 50px;
+  background-size: 80%; 
 }
 
 /* Links */
 a {
-  color:#580264;
+  color:rgba(0,0,0,.75);
   text-decoration:none;
   }
-a:hover { color:#777; }
+a:hover { color:#580264; }
 
-a.quiet { color:rgba(255,0,0,.5);}
-a.quiet:hover { color:rgba(0,0,0,.75);}
+a.active { color:rgba(255,0,0,.5);}
+a.active:hover { color:#777;}
 
 /*Sub Navigation Bar
 -------------------------*/

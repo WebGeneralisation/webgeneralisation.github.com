@@ -1,4 +1,4 @@
-function webgen_logo(container, width_){
+function webgen_logo(container, width_, init_){
 
 	var width = width_
 	    height = width_/6
@@ -16,11 +16,12 @@ function webgen_logo(container, width_){
 		.attr("id", "info")
 		.text( 'Loading...')
 		.transition().duration(2000).style("opacity",1);
-	var geo_logo, webgen_logo, line_data, init = true, finished_init = false;
-		
+	var geo_logo, webgen_logo, line_data, init = init_, finished_init = false;
 
-	d3.json("interactive_logo/webgen_topo.json", showData);
-
+	this.show = function(){
+		d3.json("interactive_logo/webgen_topo.json", showData);
+	}
+	
 	function showData(error, de) {
 		geo_logo = topojson.feature(de, de.objects.geo_logo);
 		webgen_logo = topojson.feature(de, de.objects.webgen_logo);

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="styles/base.css" />
   <link rel="stylesheet" type="text/css" href="styles/reset.css" />
-  <link rel="stylesheet" href="interactive_logo/webgen_logo_style.css" />
+  
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://d3js.org/topojson.v1.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -13,29 +13,39 @@
 </head>
 
 <body>
-
 <div class="beam margin_b0">
   <div class="margin0">
-      <div id='logo'></div>
-      <script src="interactive_logo/webgen_logo_script.js"></script>
-      <script>
-        var logo = d3.select('#logo');
-        webgen_logo(logo, window.innerWidth - ((window.innerWidth*5)/100)); //width - 5%
-
-        //Automatic resizing when the window is resized
-        $(window).resize(function() {
-          if (confirm('Reload the page?')) {
-            location.reload()
-          }
-        });
-      </script>
+      <div id='logo'></div>      
   </div>
 </div>
-<a href='/plan.html' class='invisible_anchor'><div class="beam margin_b0 padding1 inset_shadow">
-  <p class='t-align-c f36 sansserif dark_grey'>Let's build a web based community for cartographic generalisation</p>
-</div></a>
-<a href='/plan.html' class='invisible_anchor'><div class="beam margin_b0 padding1">
-  <p class='t-align-c f22 sansserif white l_heigth1'>We are currently in the first stage!<br>Building the basic infrastructure</p>
-</div></a>
+<link rel="stylesheet" href="interactive_logo/webgen_logo_style.css" />
+<script src="interactive_logo/webgen_logo_script.js"></script>  
+
+<div id='infos'></div>
+
+<script>
+  var logo = d3.select('#logo');
+  var logo_ = new webgen_logo(logo, window.innerWidth - ((window.innerWidth*5)/100), true); //width - 5%
+  logo_.show()
+
+  var contentJSON = [{'ref':'/introduction.html', 'content':'Rebuilding the concept of Web Generalisation'}]
+
+  var infoC = d3.select('#infos');
+  infoC.selectAll('div').data(contentJSON).enter().append('a')
+    .attr('href',function(d){return d.ref;})
+    .attr('class','invisible_anchor')
+    .append('div')
+      .attr('class','beam margin_b0 padding1 inset_shadow')
+      .append('p')
+        .attr('class','t-align-c f36 sansserif dark_grey')
+        .text(function(d){return d.content})
+      
+  //Automatic resizing when the window is resized
+  $(window).resize(function() {
+    if (confirm('Reload the page?')) {
+      location.reload()
+    }
+  });
+</script>
 
 </body>

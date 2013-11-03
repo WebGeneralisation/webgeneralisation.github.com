@@ -13,6 +13,10 @@
   
   <script src="contents/infoElements.js"></script>
   
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <link rel="stylesheet" href="interactive_logo/webgen_logo_style.css" />
+  <script src="interactive_logo/webgen_logo_script.js"></script>  
+
   <style>
 
   </style>
@@ -21,10 +25,10 @@
 <body>
 <script>
   var navBar = d3.select('body').append('div').attr('id','sub_navbar').attr('class','fixedElement');
-  showNavbar(navBar, 'dummy');
+  showNavbar(navBar, 'intro');
 
   var contents = d3.select('body').append('div').attr('id','contents');
-  showInfos(contents, 'dummy')
+  showInfos(contents, 'intro');
 
 
 </script>
