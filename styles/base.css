@@ -8,11 +8,14 @@
 .margin0  { margin-left:1%;}
 .margin1  { margin-left:10%;}
 .margin2 {margin-right: 1px;}
-.margin3  { margin-left:20%;}
+.margin3  { margin-left:25%;}
 
 .margin_b0 { margin-top:20px; }
 .margin_b1 { margin-top:56px; }
 .margin_b2 { margin-top:8px; }
+
+.margin_t0 { margin-bottom:20px; }
+
 
 .padding1 { padding:40px; }
 
@@ -28,6 +31,7 @@
 }
 
 .dark_grey { color: rgb(97, 97, 97); }
+.dark_grey2 { color: rgb(80, 80, 80); }
 .white { color: rgb(255,255,255); }
 
 .f16{ font-size: 16pt; }
