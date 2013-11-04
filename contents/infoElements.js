@@ -47,8 +47,10 @@ var introInfo = [
   {	'head':'old', 
   	'ref':'', 
   	'content':"an 'old' Idea" , 
-  	'description':[],
-  	"catch": ""}
+  	'description':[
+  	"...it began with the idea of sharing knowledge about generalisation..."
+  	],
+  	"catch": "Back to the roots ... let's share our knowledge"}
 
 ];
 
