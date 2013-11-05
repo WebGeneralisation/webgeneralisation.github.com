@@ -5,59 +5,76 @@
 //elements for ... introduction.html
 var introInfo = [
   {	'head':'play',
-  	'ref':'', 
+  	'img_ref':'', 
   	'content':'a playground', 
   	'description':[
-  		"...it doesn't matter if you do something clever...strange...cool...necessary...impressive..."  		
+  		"WebGen is a place where you can develop new ideas and present them to people share your passion for generalisation!"  		
   	],
-  	"catch":'WebGen should be the place for everything'},
+  	"catch":'make experiments...get inspiration...let your imagination run wild'},
+
   {	'head':'know_base',
-  	'ref':'https://github.com/WebGeneralisation/webgeneralisation.github.com/wiki', 
+  	'image':'../graphics/WebGenPedia/WebGenpedia-logo-en-196px.png',
+    'img_ref':'https://github.com/WebGeneralisation/webgeneralisation.github.com/wiki', 
   	'content':'a Knowledge-Base', 
-  	'image':'http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Wikipedia-logo-en-big.png/196px-Wikipedia-logo-en-big.png',
   	'description':[
   		"...Wikipedia has led the way ... we should learn from that..."
   	],
-  	"catch":"Let's build tools that help collecting knowledge about generalisation"},
-  {	'head':'plato', 
-  	'ref':'', 
+  	"catch":"share your knowledge ... learn from 'experts'"},
+
+  {	'head':'plato',
+    "image":'https://raw.github.com/WebGeneralisation/Admin_CorporateDesign/master/webgen_mini_logo.png', 
+  	'img_ref':'https://github.com/WebGeneralisation', 
   	'content':'a Platform', 
   	'description':[
 	  	"...generalisation can be difficult to understand and has partially philosophical aspects...",
 	  	"...generalisation is necessary for a wide range of people: Developers, Users, Acadamics, NMAs, ..."
 	],
-  	"catch": "WebGen should be indisensible for all aspects of Generalisation"},
+  	"catch": "meet different people from different fields"},
+
   {	'head':'net', 
-  	'ref':'', 
+    "image":'../graphics/network_small.png',
+  	'img_ref':'', 
   	'content':'a Network and Community', 
   	'description':[
   	"...'Web 2.0' is not just a catchword - it involves all the necessary aspects of modern communication...",
   	"...Twitter, Mailinglists, etc. - WebGen uses these tools to benefit from their indisputable advantages..."
   	],
-  	"catch": "Neogeneralisation is the catchword that describes WebGen"},
+  	"catch": "participate in building 'Generalisation 2.0'"},
+
   {	'head':'open', 
-  	'ref':'https://github.com/WebGeneralisation', 
+    'image':'https://github-media-downloads.s3.amazonaws.com/github-logo.svg', 
+  	'img_ref':'https://github.com/WebGeneralisation', 
   	'content':'an Open Project', 
   	'description':[
   	"...everything, that we do is visible to everybody...",
   	"...GitHub provides the perfect framework for collaborative development of algorithms, tools, projects, etc..."
   	],
-  	"catch": "GitHub is the central point of relevance for all developments", 
-	'image':'https://github-media-downloads.s3.amazonaws.com/github-logo.svg'},
-  {	'head':'old', 
-  	'ref':'', 
+  	"catch": "make a change ... you can even edit this site",
+    "catch_ref": "https://github.com/WebGeneralisation/webgeneralisation.github.com"},
+
+  {	'head':'old',
+    "image":"../graphics/old_WebGen.png", 
+  	'img_ref':'http://kartographie.geo.tu-dresden.de/webgen_core/index.html', 
   	'content':"an 'old' Idea" , 
   	'description':[
   	"...it began with the idea of sharing knowledge about generalisation..."
   	],
-  	"catch": "Back to the roots ... let's share our knowledge"}
+  	"catch": "read about the scientific background",
+    "catch_ref": "http://kartographie.geo.tu-dresden.de/webgen_docs/index.php?option=com_content&view=article&id=46&Itemid=119&lang=en"}
 
 ];
 
 //**********
 //elements for ... dummy.html
 var dummy = [
-  {'head':'head', 'ref':'ref', 'content':'content', 'description':''}
+  { 'head':'head',
+    "image":"../graphics/dummy.png", 
+    'img_ref':'URL where the image is linked to', 
+    'content':"the main heading" , 
+    'description':["one statement", "a second statement", "..."
+    ],
+    "catch": "a 'catchy' phrase, that highlights the statment of this info",
+    "catch_ref": "URL where the catchy phrase is linked to"}
 ];
 
 
@@ -73,7 +90,6 @@ function showInfos(container, active){
 	//heading
 	contentContainers.append('p')
 	      .attr('class','t-align-c f36 sansserif dark_grey margin_t0')
-	      .attr('href',function(d){return d.ref})
 	      .text(function(d){return "... " + d.content})
 
 	//add the logo at the rigth place
@@ -81,7 +97,7 @@ function showInfos(container, active){
 	
 	//image (if one exists) 
 	contentContainers.append('a')
-	      .attr('href',function(d){return d.ref})
+	      .attr('href',function(d){return d.img_ref})
 	      .append('img')
 		      .attr('src',function(d){return d.image})
 		      .attr('class','i-align-c margin_b2 margin_t0')	
@@ -90,13 +106,16 @@ function showInfos(container, active){
 		.append('p').attr('id','explanation')
 	      .attr('class','t-align-c f16 margin_b2 sansserif dark_grey')
 	      .text(function(d){return d})
-	//explanations	      
-	contentContainers.append('p').attr('class','t-align-c f22 margin_b0 sansserif dark_grey2')
+	//catchy sentence      
+	contentContainers.append('a')
+    .attr('href',function(d){return d.catch_ref})
+    .append('p').attr('class','t-align-c f22 margin_b0 sansserif dark_grey2')
 	      .text(function(d){return "- " + d.catch + " -"})
 
-	var logo = d3.select('#logo');
-  	var logo_ = new webgen_logo(logo, window.innerWidth/2, false);
-  	logo_.show()
-
+  if(active!='dummy'){
+  	var logo = d3.select('#logo');
+    var logo_ = new webgen_logo(logo, window.innerWidth/2, false);
+    logo_.show()
+  }
 }
 
