@@ -22,8 +22,8 @@ var introInfo = [
   	"catch":"share your knowledge ... learn from 'experts'"},
 
   {	'head':'plato',
-    "image":'https://raw.github.com/WebGeneralisation/Admin_CorporateDesign/master/webgen_mini_logo.png', 
-  	'img_ref':'https://github.com/WebGeneralisation', 
+    "image":'../graphics/network_small.png', 
+  	'img_ref':'', 
   	'content':'a Platform', 
   	'description':[
 	  	"...generalisation can be difficult to understand and has partially philosophical aspects...",
@@ -32,8 +32,8 @@ var introInfo = [
   	"catch": "meet different people from different fields"},
 
   {	'head':'net', 
-    "image":'../graphics/network_small.png',
-  	'img_ref':'', 
+    "image":'https://raw.github.com/WebGeneralisation/Admin_CorporateDesign/master/webgen_mini_logo.png',
+  	'img_ref':'https://github.com/WebGeneralisation', 
   	'content':'a Network and Community', 
   	'description':[
   	"...'Web 2.0' is not just a catchword - it involves all the necessary aspects of modern communication...",
