@@ -3,6 +3,22 @@
 //JSON-objects than contain all contents for the visualised information
 //**********
 //elements for ... introduction.html
+var heading = {
+  'head':'Short introduction',
+  'content':["Cartographic generalisation is, until now, a highly complex field of possible applications, techniques as well as methods and has partially philosophical point of views.",
+  "This project will analyse in how far we can refine the basic concept of WebGen to open it to a wider audience, that arose within the last years related to the emergence of the Web 2.0 (e.g.: OpenStreetMap).",
+  "In that relation we want to expand the basic, highly technologically driven, concept of WebGen with a social component, that drives most Web 2.0-Trends.",
+  "Simply said, we want to establish a kind of WebGen-community that uses the modern cummunication structure to unite the different aspects respectively user needs (e.g.: Developer, User, Academics) to build a kind of central knowledge base for the technological status quo of cartographic generalisation."]}
+
+function showHeading(container){
+  container.append('p').attr('class','t-align-c f36 sansserif dark_grey margin_t0').text(heading.head)
+  container.attr('class','beam margin_b1 padding1 inset_shadow')
+  container.selectAll('#head_content').data(heading.content).enter().append('p')
+    .attr('id','head_content')
+    .text(function(d) {return d})
+    .attr('class','t-align-c f16 margin_b2 sansserif dark_grey')
+}
+
 var introInfo = [
   {	'head':'play',
   	'img_ref':'', 
@@ -31,6 +47,17 @@ var introInfo = [
 	],
   	"catch": "meet different people from different fields"},
 
+  { 'head':'pub',
+    "image":'../graphics/publication_small.png', 
+    'img_ref':'', 
+    'content':'a Form of Publication', 
+    'description':[
+      "...research builds the scientific base for all generalisation tasks...",
+      "...reading a scientific paper is time consuming ...",
+      "...the more complex a theoretical description is, the more difficult to understand..."
+  ],
+    "catch": "present your scientific work visually impressive and plain"},
+
   {	'head':'net', 
     "image":'https://raw.github.com/WebGeneralisation/Admin_CorporateDesign/master/webgen_mini_logo.png',
   	'img_ref':'https://github.com/WebGeneralisation', 
@@ -42,7 +69,7 @@ var introInfo = [
   	"catch": "participate in building 'Generalisation 2.0'"},
 
   {	'head':'open', 
-    'image':'https://github-media-downloads.s3.amazonaws.com/github-logo.svg', 
+    'image':'../graphics/open_project_img_400px.png', 
   	'img_ref':'https://github.com/WebGeneralisation', 
   	'content':'an Open Project', 
   	'description':[
@@ -100,7 +127,7 @@ function showInfos(container, active){
 	      .attr('href',function(d){return d.img_ref})
 	      .append('img')
 		      .attr('src',function(d){return d.image})
-		      .attr('class','i-align-c margin_b2 margin_t0')	
+		      .attr('class','i-align-c margin_b2 margin_t0 r_corners1')	
 	//explanations	      
 	contentContainers.selectAll('#explanation').data(function(d){return d.description}).enter()
 		.append('p').attr('id','explanation')

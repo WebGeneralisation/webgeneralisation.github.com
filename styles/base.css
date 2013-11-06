@@ -45,4 +45,8 @@
 p.serif{font-family:"Times New Roman",Times,serif;}
 p.sansserif{font-family:Arial,Helvetica,sans-serif;}
 
+.r_corners1{
+	border-radius: 15px;
+}
+
 

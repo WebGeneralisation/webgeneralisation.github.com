@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <title>Introduction to WebGen</title>
   
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -17,15 +18,15 @@
   <link rel="stylesheet" href="interactive_logo/webgen_logo_style.css" />
   <script src="interactive_logo/webgen_logo_script.js"></script>  
 
-  <style>
-
-  </style>
 </head>
 
 <body>
 <script>
   var navBar = d3.select('body').append('div').attr('id','sub_navbar').attr('class','fixedElement');
   showNavbar(navBar, 'intro');
+
+  var head = d3.select('body').append('div').attr('id','contents');
+  showHeading(head);
 
   var contents = d3.select('body').append('div').attr('id','contents');
   showInfos(contents, 'intro');
