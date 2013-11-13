@@ -41,7 +41,7 @@
 
 .l_heigth1 { line-height:2; }
 
-.inset_shadow  { text-shadow: rgb(224, 224, 224) 1px 1px 0px; }
+.inset_shadow{ text-shadow: rgb(224, 224, 224) 1px 1px 0px; }
 
 p.serif{font-family:"Times New Roman",Times,serif;}
 p.sansserif{font-family:Arial,Helvetica,sans-serif;}

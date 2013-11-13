@@ -14,7 +14,7 @@ var introInfo = [
   	"catch":'make experiments...get inspiration...let your imagination run wild'},
 
   {	'head':'know_base',
-  	'image':'../graphics/WebGenPedia/WebGenpedia-logo-en-196px.png',
+  	'image':'../graphics/WebGenPedia/WebGenpedia-logo-en-400px.png',
     'img_ref':'https://github.com/WebGeneralisation/webgeneralisation.github.com/wiki', 
   	'content':'a Knowledge-Base', 
   	'description':[
