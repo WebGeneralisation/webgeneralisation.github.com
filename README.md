@@ -1,5 +1,4 @@
 ## webgeneralisation.github.com
-===============================
 
 This is the main 'homepage' of the WebGen 2.0 project!
 
