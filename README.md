@@ -21,6 +21,7 @@ On top of each site, is a navigation bar which is defined by a JavaScript-file..
 
 ...this file consists of:
 * a JSON-object 
+
 ```JavaScript
 var navElements=[
 		  {"head":"head", "ref":"URL", "content":"what will be displayed"},...
