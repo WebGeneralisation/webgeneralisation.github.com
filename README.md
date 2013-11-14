@@ -39,16 +39,16 @@ The information that are given at the sites is currently completely stored withi
 * contents/infoElements.js
 
 ...this file also consists of some objects:
-* ```JavaScript
+```JavaScript
 	var introInfo = []
 	```
-* ```JavaScript
+```JavaScript
 	var partInfo = []
 	```
-* ```JavaScript
+```JavaScript
 	var blogInfo = []
 	```
-* ```JavaScript
+```JavaScript
 	var dummy = []
 	```
 
