@@ -86,17 +86,17 @@ It is very simple:
 * re-save it with your new file-name (e.g.: *'projects.html'*)
 * add the page-name at the following parts:
 
-	- 	```HTML
-		<title>Dummy-site</title>
-		```
+```HTML
+<title>Dummy-site</title>
+```
 
-	- 	```JavaScript
-		showInfos(contents, 'dummy');
-		```
+```JavaScript
+showInfos(contents, 'dummy');
+```
 
-	- 	```JavaScript
-		showNavbar(contents, 'dummy');
-		```
+```JavaScript
+showNavbar(contents, 'dummy');
+```
 * add a new JSON-object to *infoElements.js* (make use of the dummy-object)
 * add the new object to the if-clause of the function *showInfos*
 
