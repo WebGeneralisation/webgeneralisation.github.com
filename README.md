@@ -3,7 +3,7 @@
 
 This is the main 'homepage' of the WebGen 2.0 project!
 
-## About this site
+## How to edit this site
 
 This homepage is build with a very simple and basic content management, which is build with [D3.js](http://d3js.org/)
 
