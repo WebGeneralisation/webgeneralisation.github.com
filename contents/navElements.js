@@ -5,8 +5,8 @@
 //elements for ... navigation bar
 var navElements=[
 		  {"head":"intro", "ref":"/introduction.html", "content":"WebGen is..."},
-		  {"head":"part", "ref":"/dummy.html", "content":"How to participate"},
-		  {"head":"blog", "ref":"/dummy.html", "content":"Blog"}
+		  {"head":"part", "ref":"participate.html", "content":"How to participate"},
+		  {"head":"blog", "ref":"/blog.html", "content":"Blog"}
 ]
 
 //Display all elements of the corresponding json-objects

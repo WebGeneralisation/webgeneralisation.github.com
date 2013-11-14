@@ -75,6 +75,64 @@ var introInfo = [
     "catch_ref": "http://kartographie.geo.tu-dresden.de/webgen_docs/index.php?option=com_content&view=article&id=46&Itemid=119&lang=en"}
 
 ];
+//**********
+//elements for ... participation.html
+var partInfo = [
+
+  { 'head':'basic',
+    "image":"../graphics/original_320.png", 
+    'img_ref':'https://github.com', 
+    'content':"GitHub ... the social coding instance" , 
+    'description':["...it seems to be complicated...only at first glance...",
+      "...in fact, it is super simple to handle..."],
+    "catch": "Get some background information",
+    "catch_ref": "http://git-scm.com/book"},
+
+  { 'head':'getAccount',
+    "image":"../graphics/setuptocat_320.jpg", 
+    'img_ref':'https://github.com/join', 
+    'content':"get an account" , 
+    'description':["...it's simple...", "...completely free of charge..."
+    ],
+    "catch": "You don't have a GitHub account? Sign up now!",
+    "catch_ref": "https://github.com/join"},
+
+  { 'head':'member',
+    "image":"../graphics/benevocats_320.png", 
+    'img_ref':'https://github.com/WebGeneralisation/webgeneralisation.github.com/issues/2', 
+    'content':"Apply for membership" , 
+    'description':["...everybody that is interested in map generalisation is welcome...", 
+      "...look for an existing project and apply for the membership of the corresponding team", 
+      "...or realise your ideas by launching a new team..."
+    ],
+    "catch": "What are you waiting for? Let's work together!",
+    "catch_ref": "https://github.com/WebGeneralisation/webgeneralisation.github.com/issues/2"},
+
+  { 'head':'mailinglist',
+    "image":"../graphics/groups.png", 
+    'img_ref':'https://github.com/WebGeneralisation/webgeneralisation.github.com/issues/1', 
+    'content':"Mailinglist" , 
+    'description':["It is currently not defined if we will also cummunicate via mailing list."
+    ],
+    "catch": "You can still participate in the discussion!!!",
+    "catch_ref": "https://github.com/WebGeneralisation/webgeneralisation.github.com/issues/1"}
+];
+//**********
+//elements for ... blog.html
+var blogInfo = [
+  { 'head':'head',
+    "image":"../graphics/WebGenPress/webgenpress.png", 
+    'img_ref':'https://github.com/WebGeneralisation/webgeneralisation.github.com/issues/3', 
+    'content':"Should we maintain a blog?" , 
+    'description':["...it is a very good tool to inform about news and developments...", 
+      "...but has to be managed...", 
+      "...Wordpress is initially favored...",
+      "...should we set it up locally or should we use a server solution..."
+    ],
+    "catch": "Let's discuss about it!",
+    "catch_ref": "https://github.com/WebGeneralisation/webgeneralisation.github.com/issues/3"}
+];
+
 
 //**********
 //elements for ... dummy.html
@@ -92,9 +150,11 @@ var dummy = [
 
 //Display all elements of the corresponding json-objects
 function showInfos(container, active){
-	var elements = dummy	//always open the dummy object
-	if(active == 'intro')elements=introInfo		//show the introduction.html
-	//basic container
+  var elements = dummy	//always open the dummy object
+	if(active == 'intro')elements=introInfo    //show the introduction.html
+  else if(active == 'part')elements=partInfo   //show the participate.html
+  else if(active == 'blog')elements=blogInfo   //show the blog.html
+  //basic container
 	var contentContainers = container.selectAll('div').data(elements)
 	  .enter().append('div')
 	    .attr('class','beam margin_b1 padding1 inset_shadow')
@@ -124,7 +184,7 @@ function showInfos(container, active){
     .append('p').attr('class','t-align-c f22 margin_b0 sansserif dark_grey2')
 	      .text(function(d){return "- " + d.catch + " -"})
 
-  if(active!='dummy'){
+  if(active=='intro'){
   	var logo = d3.select('#logo');
     var logo_ = new webgen_logo(logo, window.innerWidth/2, false);
     logo_.show()
