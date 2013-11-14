@@ -28,6 +28,7 @@ var navElements=[
 ]
 ```
 * and a function
+
 ```JavaScript
 function showNavbar(container, active){...}
 ```
@@ -51,12 +52,14 @@ The information that are given at the sites is currently completely stored withi
 ```
 
 ...and one function:
+
  ```JavaScript
  function showInfos(container, active){...}
  ```
 ### Dependencies
 
 **showInfos** depends on some information that you define within the corresponding html-files
+
 ```JavaScript
 var elements = dummy	//always open the dummy object
 if(active == 'intro')elements=introInfo    //show the introduction.html
@@ -65,11 +68,13 @@ else if(active == 'blog')elements=blogInfo   //show the blog.html
 ```
 
 You can see the corresponding part in the html-file (e.g.: introduction.html):
+
 ```JavaScript
 showInfos(contents, 'intro');
 ```
 
 **showNavbar** has the same dependency...so you have to define it in the same manner within in the corresponding html-file (e.g.: introduction.html):
+
 ```JavaScript
 showNavbar(navBar, 'intro');
 ```
@@ -80,6 +85,7 @@ It is very simple:
 * open the *'dummy.html'*
 * re-save it with your new file-name (e.g.: *'projects.html'*)
 * add the page-name at the following parts:
+
 	- 	```HTML
 		<title>Dummy-site</title>
 		```
