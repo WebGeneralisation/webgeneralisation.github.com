@@ -41,16 +41,13 @@ The information that are given at the sites is currently completely stored withi
 ...this file also consists of some objects:
 ```JavaScript
 	var introInfo = []
-	```
-```JavaScript
+
 	var partInfo = []
-	```
-```JavaScript
+
 	var blogInfo = []
-	```
-```JavaScript
+
 	var dummy = []
-	```
+```
 
 ...and one function:
  ```JavaScript
