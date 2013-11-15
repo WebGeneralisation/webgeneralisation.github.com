@@ -33,7 +33,10 @@
   "When you're looking for tools and solutions...please follow the project and return later...",
   "...or just add ideas, by starting issues or participate in discussions!"]}
 
-  var introduction = d3.select('body').append('div').attr('class','beam1 margin_b1 padding1 inset_shadow');
+  var introduction = d3.select('body').append('div')
+    .attr('class','beam1 margin_b1 padding1 inset_shadow')
+    .append('a')
+      .attr('href','https://github.com/WebGeneralisation');
   introduction.append('p').attr('class','t-align-c f36 sansserif dark_grey margin_t0').text(intro_content.head)
   introduction.append('p').attr('class','t-align-c f22 sansserif dark_grey margin_t0').text(intro_content.sub_head)
   introduction.selectAll('#head_content').data(intro_content.content).enter().append('p')
