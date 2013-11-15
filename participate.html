@@ -24,6 +24,23 @@
   var navBar = d3.select('body').append('div').attr('id','sub_navbar').attr('class','fixedElement');
   showNavbar(navBar, 'part');
 
+  var intro_content = {
+  'head':'Welcome: Developers',
+  'sub_head':"We are in the 1st Stage - Building the basic infrastructure",
+  'content':["Currently, there's a lot of programming to do!",
+  "If you like to participate in building the basic infrastructe, developing the 1st tools and similar tasks, then you are cordially invited to join!",
+  "------",
+  "When you're looking for tools and solutions...please follow the project and return later...",
+  "...or just add ideas, by starting issues or participate in discussions!"]}
+
+  var introduction = d3.select('body').append('div').attr('class','beam1 margin_b1 padding1 inset_shadow');
+  introduction.append('p').attr('class','t-align-c f36 sansserif dark_grey margin_t0').text(intro_content.head)
+  introduction.append('p').attr('class','t-align-c f22 sansserif dark_grey margin_t0').text(intro_content.sub_head)
+  introduction.selectAll('#head_content').data(intro_content.content).enter().append('p')
+    .attr('id','head_content')
+    .text(function(d) {return d})
+    .attr('class','t-align-c f16 margin_b0 sansserif dark_grey')
+
   var contents = d3.select('body').append('div').attr('id','contents');
   showInfos(contents, 'part')
 

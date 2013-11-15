@@ -9,3 +9,9 @@ http://octodex.github.com/benevocats/
 
 * setup octocat
 http://octodex.github.com/setuptocat/
+
+* collaborative octocats
+http://octodex.github.com/collabocats/
+
+* cunstruction octocat
+http://octodex.github.com/constructocat-v2/

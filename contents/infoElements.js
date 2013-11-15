@@ -97,13 +97,39 @@ var partInfo = [
     "catch": "You don't have a GitHub account? Sign up now!",
     "catch_ref": "https://github.com/join"},
 
+  { 'head':'easy',
+    "image":"../graphics/collabocats_320.jpg", 
+    'img_ref':'https://github.com/WebGeneralisation/webgeneralisation.github.com/issues', 
+    'content':"the easiest way" , 
+    'description':["...you can participate even without good programming skills...", 
+      "...good and fresh ideas are also very important...",
+      "...you can join discussions or pose problems..."
+    ],
+    "catch": "Come on! ... Issues are as easy as an E-Mail!",
+    "catch_ref": "https://github.com/blog/831-issues-2-0-the-next-generation"},
+
+  { 'head':'easy',
+    "image":"../graphics/constructocat2_320.jpg", 
+    'img_ref':'https://github.com/WebGeneralisation/webgeneralisation.github.com/issues', 
+    'content':"just pull!" , 
+    'description':["...you can also participate in development...", 
+      "------",
+      "...simply fork a repo...",
+      "...add your corrections or extensions...",
+      "...and pull a request!"
+    ],
+    "catch": "That's not as easy...but you can do it!",
+    "catch_ref": "https://github.com/blog/831-issues-2-0-the-next-generation"},
+
   { 'head':'member',
     "image":"../graphics/benevocats_320.png", 
     'img_ref':'https://github.com/WebGeneralisation/webgeneralisation.github.com/issues/2', 
-    'content':"Apply for membership" , 
-    'description':["...everybody that is interested in map generalisation is welcome...", 
-      "...look for an existing project and apply for the membership of the corresponding team", 
-      "...or realise your ideas by launching a new team..."
+    'content':"apply for membership" , 
+    'description':["...just contributing ideas or pulling is not enough for you?",
+    "...your are cordially invited to get a member...",
+    "------",
+    "...look for an existing project and apply for the membership of the corresponding team...", 
+    "...or realise your ideas by launching a new team..."
     ],
     "catch": "What are you waiting for? Let's work together!",
     "catch_ref": "https://github.com/WebGeneralisation/webgeneralisation.github.com/issues/2"},
